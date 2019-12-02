@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         choose = findViewById(R.id.btnChoose);
         showList = findViewById(R.id.btnList);
         txtDesignation = findViewById(R.id.txtDesignation);
-        txtContinant = findViewById(R.id.txtDesignation);
+        txtContinant = findViewById(R.id.txtContinant);
         txtSuperficie = findViewById(R.id.txtSuperficie);
     }
 }

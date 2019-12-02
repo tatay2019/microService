@@ -41,6 +41,12 @@ public class Connect extends SQLiteOpenHelper {
         return db.rawQuery(sql, null);
     }
 
+    public static void deleteDestination(SQLiteDatabase database, int id)
+    {
+        database.execSQL("DELETE FROM Voyage Where id = ?",
+                new Object[]{id});
+    }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
 

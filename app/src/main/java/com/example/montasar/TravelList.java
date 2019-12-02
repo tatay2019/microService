@@ -35,7 +35,6 @@ public class TravelList extends AppCompatActivity {
             String continant = cursor.getString(2);
             byte[] image = cursor.getBlob(3);
             double superficie = cursor.getDouble(4);
-            Log.d("working...", designation);
             list.add(new Voyage(id, designation, continant, image, superficie));
         }
 
@@ -48,9 +47,9 @@ public class TravelList extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Voyage destination = listAdapter.getItem(position);
+                Voyage voyage = listAdapter.getItem(position);
                 Intent intent = new Intent(TravelList.this, ConsultItem.class);
-                intent.putExtra("destination", destination);
+                intent.putExtra("voyageDetails", voyage);
                 startActivity(intent);
             }
         });
